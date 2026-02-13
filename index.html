@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu experiencia cuenta | Participa en una prueba digital</title>
+  <meta name="description" content="Participa en una prueba digital guiada para ayudarnos a mejorar un nuevo servicio digital. Prueba 100% remota, 1 hora, tú eliges la fecha y hora.">
+  <meta property="og:title" content="Tu experiencia cuenta | Participa en una prueba digital">
+  <meta property="og:description" content="Participa en una prueba digital guiada para ayudarnos a mejorar un nuevo servicio digital.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="hero__logo">
+        <img src="assets/logo.svg" alt="Logo" class="hero__logo-img" width="78" height="32">
+      </div>
+      <h1 class="hero__title">Tu experiencia <span class="hero__title-accent">cuenta</span></h1>
+      <p class="hero__subtext">
+        Participa en una prueba digital guiada para ayudarnos a mejorar un nuevo servicio digital.
+      </p>
+      <ul class="hero__list">
+        <li class="hero__list-item">Prueba 100% remota.</li>
+        <li class="hero__list-item">1 hora de duración.</li>
+        <li class="hero__list-item">Tú eliges la fecha y hora.</li>
+      </ul>
+      <p class="hero__badge">
+        <img src="assets/gift.svg" alt="" class="hero__badge-icon" width="40" height="40">
+        <span class="hero__badge-text">
+          <span class="hero__badge-line hero__badge-line--main">Recibe $100.000 COP por tu tiempo</span>
+          <span class="hero__badge-line hero__badge-line--sub">entregados al finalizar la prueba</span>
+        </span>
+      </p>
+      <a href="#formulario" class="hero__cta">Quiero participar</a>
+      <p class="hero__disclaimer">
+        Dirigido a propietarios de inmuebles o responsables de la factura de gas, mayores de 20 en Bogotá, Cundinamarca y Boyacá.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="form-section" id="formulario" aria-labelledby="form-section-heading">
+      <div class="container form-section__container">
+        <h2 id="form-section-heading" class="visually-hidden">Formulario de registro</h2>
+        <div class="fillout-embed">
+          <div style="width:100%;height:500px;" data-fillout-id="i6MWterPJxus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
+          <script src="https://server.fillout.com/embed/v1/"></script>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__logo">
+        <img src="assets/logo.svg" alt="Logo" class="footer__logo-img" height="48">
+      </div>
+      <div class="footer__content">
+        <p class="footer__text">
+          Nos dedicamos a evaluar y mejorar experiencias digitales.
+        </p>
+        <a href="https://www.aguayo.co/" class="footer__link" rel="noopener noreferrer" target="_blank">www.aguayo.co</a>
+        <nav class="footer__legal" aria-label="Enlaces legales">
+          <a href="https://aguayo.co/es/t%C3%A9rminos-y-condiciones-de-uso/" class="footer__legal-link" rel="noopener noreferrer" target="_blank">Términos y condiciones</a>
+          <a href="https://aguayo.co/es/pol%C3%ADtica-de-privacidad-del-servicio-de-reclutamiento-de-aguayo/" class="footer__legal-link" rel="noopener noreferrer" target="_blank">Política de privacidad</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function() {
+      // Evitar que el navegador restaure la posición de scroll anterior
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      // Empezar siempre en la parte superior al cargar
+      window.addEventListener('load', function() { window.scrollTo(0, 0); });
+      document.addEventListener('DOMContentLoaded', function() { window.scrollTo(0, 0); });
+      // Cuando Fillout inyecta el iframe, suele provocar scroll; volver al hero
+      var embed = document.querySelector('.fillout-embed');
+      if (embed && typeof MutationObserver !== 'undefined') {
+        var observer = new MutationObserver(function() {
+          if (embed.querySelector('iframe')) {
+            window.scrollTo(0, 0);
+            setTimeout(function() { window.scrollTo(0, 0); }, 100);
+            observer.disconnect();
+          }
+        });
+        observer.observe(embed, { childList: true, subtree: true });
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+/* ============================================
+   Reset & base
+   ============================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Work Sans", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #1F2937;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* ============================================
+   Layout
+   ============================================ */
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* ============================================
+   Utilities
+   ============================================ */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================================
+   Hero
+   ============================================ */
+.hero {
+  background-color: #FEE2E2;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .hero .container {
+    max-width: 640px;
+  }
+
+  .hero {
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
+}
+
+.hero__logo {
+  margin-bottom: 16px;
+}
+
+.hero__logo-img {
+  display: block;
+  max-width: 180px;
+  height: auto;
+}
+
+.hero__title {
+  margin: 0 0 8px;
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #111827;
+}
+
+.hero__title-accent {
+  color: #B91C1C;
+}
+
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 3rem;
+    margin-bottom: 24px;
+  }
+}
+
+.hero__subtext {
+  margin: 0 0 32px;
+  font-size: 1.125rem;
+  line-height: 1.15;
+  color: #111827;
+  max-width: 36em;
+}
+
+@media (min-width: 768px) {
+  .hero__subtext {
+    margin-bottom: 32px;
+  }
+}
+
+.hero__list {
+  margin-bottom: 32px;
+}
+
+.hero__list-item {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 0px;
+  color: #111827;
+}
+
+.hero__list-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.15em;
+  width: 20px;
+  height: 20px;
+  background-image: url("assets/check.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .hero__list {
+    margin-bottom: 48px;
+  }
+}
+
+.hero__cta {
+  display: block;
+  width: 100%;
+  padding: 14px 32px;
+  text-align: center;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #B91C1C;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero__cta:hover {
+  background-color: #991B1B;
+  box-shadow: 0 2px 8px rgba(185, 28, 28, 0.35);
+}
+
+.hero__cta:focus {
+  outline: none;
+}
+
+.hero__cta:focus-visible {
+  outline: 2px solid #B91C1C;
+  outline-offset: 2px;
+}
+
+.hero__badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin:  8px 8px 32px 0;
+  color: #1F2937;
+  max-width: 28em;
+  text-align: left;
+}
+
+.hero__badge-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.hero__badge-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hero__badge-line--main {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-top: 8px;
+}
+
+.hero__badge-line--sub {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.hero__disclaimer {
+  margin: 24px 12px 0 12px;
+  font-size: 0.8125rem;
+  color: #4B5563;
+  text-align: center;
+}
+
+/* ============================================
+   Form section
+   ============================================ */
+.form-section {
+  background-color: #fff;
+  padding-top: 16px;
+  padding-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .form-section {
+    padding-top: 32px;
+    padding-bottom: 48px;
+  }
+}
+
+.form-section__container {
+  max-width: 800px;
+  padding: 0px;
+}
+
+.fillout-embed {
+  min-height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.fillout-embed__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  padding: 32px;
+  border: 2px dashed #D1D5DB;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  color: #6B7280;
+  text-align: center;
+}
+
+/* When real embed is present, hide placeholder */
+.fillout-embed iframe {
+  width: 100%;
+  min-height: 500px;
+  border: 0;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+.footer {
+  background-color: #1F2937;
+  color: #E5E7EB;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding-top: 48px;
+    padding-bottom: 40px;
+  }
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .footer__inner {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 32px;
+  }
+}
+
+.footer__logo-img {
+  display: block;
+  max-width: 120px;
+  height: 48px;
+  filter: brightness(0) invert(1);
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__text {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: #D1D5DB;
+  line-height: 1.25;
+}
+
+.footer__link {
+  font-size: 0.9375rem;
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.footer__link:hover {
+  color: #BFDBFE;
+}
+
+.footer__link:focus {
+  outline: none;
+}
+
+.footer__link:focus-visible {
+  outline: 2px solid #93C5FD;
+  outline-offset: 2px;
+}
+
+.footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.footer__legal-link {
+  font-size: 0.8125rem;
+  color: #9CA3AF;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__legal-link:hover {
+  color: #D1D5DB;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer__legal-link:focus {
+  outline: none;
+}
+
+.footer__legal-link:focus-visible {
+  outline: 2px solid #9CA3AF;
+  outline-offset: 2px;
+}
